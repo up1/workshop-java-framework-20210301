@@ -16,7 +16,7 @@ public class DemoService {
     }
 
     public static void main(String[] args) {
-        // Anonymous class
+        // Anonymous class + Override by methods
         Random random = new Random(){
             @Override
             public int nextInt(int bound) {
@@ -24,7 +24,14 @@ public class DemoService {
             }
         };
         DemoService demoService = new DemoService();
-        demoService.setRandom(random);
+        demoService.setRandom(new Random5());
         out.println(demoService.generateData("somkiat"));
+    }
+}
+
+class Random5 extends Random {
+    @Override
+    public int nextInt(int bound) {
+        return 5;
     }
 }
