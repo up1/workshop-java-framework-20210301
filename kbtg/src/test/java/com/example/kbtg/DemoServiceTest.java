@@ -17,6 +17,7 @@ public class DemoServiceTest {
         String actualResult =demoService.generateData("somkiat");
         assertEquals("somkiat5", actualResult);
     }
+
 }
 
 class Random5 extends Random {
