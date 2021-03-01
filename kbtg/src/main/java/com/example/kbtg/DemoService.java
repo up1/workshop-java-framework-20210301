@@ -14,6 +14,10 @@ public class DemoService {
             return name + number;
         }
         throw new RuntimeException("Invalid number with " + number);
+        /*
+        1. Checked exception => compile time
+        2. Unchecked exception => runtime => NPE, ArrayIndexOutOfBound, OOM, ClassCastException
+         */
     }
 
 //    public static void main(String[] args) {
