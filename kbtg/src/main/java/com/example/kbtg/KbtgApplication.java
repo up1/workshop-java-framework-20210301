@@ -20,6 +20,17 @@ public class KbtgApplication {
 			out.println(bean);
 		}
 		out.println(context.getBeanDefinitionCount());
+
+//		// Demo :: Singleton instance
+//		User user1 = context.getBean(User.class);
+//		user1.setName("Somkiat");
+//		out.println(user1.getName()); // 1
+//
+//		User user2 = context.getBean(User.class);
+//		user2.setName("User 2");
+//		out.println(user2.getName()); // 2
+//		out.println(user1.getName()); // 3
+
 	}
 
 }
