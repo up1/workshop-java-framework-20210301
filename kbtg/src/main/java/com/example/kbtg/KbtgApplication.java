@@ -10,9 +10,9 @@ import static java.lang.System.out;
 public class KbtgApplication {
 
 	public static void main(String[] args) {
-		// IoC Container, Bean  => Spring
-		// DI (Dependency Injection)
+		// IoC Container => Context, Bean  => Spring
 		// IoC (Inversion of Control)
+		// DI (Dependency Injection)
 		ConfigurableApplicationContext context
 				= SpringApplication.run(KbtgApplication.class, args);
 		String[] beans = context.getBeanDefinitionNames();
