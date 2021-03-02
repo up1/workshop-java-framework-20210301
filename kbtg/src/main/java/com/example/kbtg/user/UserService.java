@@ -10,6 +10,6 @@ public class UserService {
             return new UserResponse(id, "somkiat", 30);
         }
         // Fail
-        throw new RuntimeException("User not found id="+ id);
+        throw new UserNotFoundException("User not found id="+ id);
     }
 }
