@@ -28,6 +28,7 @@ public class PostGateway {
             return Optional.ofNullable(
                     restTemplate.getForObject(url, PostResponse.class));
         } catch (RestClientException e) {
+            e.printStackTrace();
             return Optional.empty();
         }
     }
