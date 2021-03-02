@@ -1,6 +1,8 @@
 package com.example.kbtg.user;
 
-public class UserResponse {
+import java.util.Objects;
+
+public class UserResponse extends Object {
     private Integer id;
     private String name;
     private Integer age;
@@ -38,4 +40,16 @@ public class UserResponse {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserResponse that = (UserResponse) o;
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(age, that.age);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age);
+    }
 }
