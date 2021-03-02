@@ -29,4 +29,9 @@ public class UserControllerTest {
         assertEquals(expected, response);
     }
 
+    @Test
+    public void user_not_found_with_user_id_15() {
+        // TODO
+    }
+
 }
