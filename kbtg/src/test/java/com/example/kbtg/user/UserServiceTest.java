@@ -33,4 +33,9 @@ public class UserServiceTest {
         assertEquals(30, response.getAge());
     }
 
+    @Test
+    public void user_not_found_with_id_15_should_throw_exception() {
+        // TODO
+    }
+
 }
