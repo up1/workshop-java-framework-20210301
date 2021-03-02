@@ -35,7 +35,14 @@ public class UserServiceTest {
 
     @Test
     public void user_not_found_with_id_15_should_throw_exception() {
-        // TODO
+        // Arrange
+        when(userRepository.findById(15)).thenReturn(Optional.empty());
+        // Act
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            UserService userService = new UserService(userRepository);
+            userService.getInfo(15);
+        });
+        assertEquals("User not found id=15", exception.getMessage());
     }
 
 }
